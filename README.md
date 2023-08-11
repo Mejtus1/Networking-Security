@@ -14,3 +14,6 @@ Ipconfig
 netstat
 - network statics, diagnostics, and analysis
 - By running this command, will show the number of active connections on the system.
+
+arp
+- MAC address and hardware address
