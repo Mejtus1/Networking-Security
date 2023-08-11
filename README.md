@@ -1,6 +1,7 @@
 # Networking-Security
 --
 Basic Networking commands for Windows 
+
 Ping
 - it is used detecting devices on network and troubleshooting network problems
 - It will help to see the connection between your device and another device on the network
