@@ -11,3 +11,6 @@ Ping
 Ipconfig
 - find network information local devices like IP Address and default gateway
 
+netstat
+- network statics, diagnostics, and analysis
+- By running this command, will show the number of active connections on the system.
