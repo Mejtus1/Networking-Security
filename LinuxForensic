@@ -1,1 +1,29 @@
+Volatile and non-volatile data in LINUX 
+Linux us a open-source OS that is used extensively for enterprise servers and emoloyee platoforms 
+
+Collecting Volatile Data 
+- Hostname, date and time 
+- Uptime
+- Open ports
+- Network information
+- Running processes 
+- Open files 
+- Loaded kernel modules 
+- User events
+- Swap areas and Disk pertition information 
+- Mounted filesystem information
+————————————————————
+Commands 
+
+hostname - outputs type of OS (example: Ubuntu) 
+
+date - outputs date / time 
+
+cat /etc/timezone - outputs timezone (example: America/Los_Angeles) 
+
+date +%s = calculate the epoch time - time the system was put into working state for the first time 
+At internet there are apps for it - example: epoch converter 
+
+uptime - displays how long the system has been running since the last start 
+
 
