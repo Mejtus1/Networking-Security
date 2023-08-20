@@ -57,3 +57,29 @@ time
 user who opened file, took picture etc. 
 gps location 
 
+--------------------------
+
+Windows File System Structure
+C:
+Boot, Logs, PerfLogs, ProgramFiles, ProgramFiles (x86), Program Data, Windows, Users, 
+
+Users - Public, username
+username - AppData
+Windows - System, System32, SysWOW64, WinSxS
+
+Boot = Hidden directory containing boot files
+Logs = Stores event logs (Windows 10 > up)
+PerfLogs = stores performance logs if enabled
+Program Files = 64bit applications 
+Program Files (x86) = 32bit applications (for backwards compatibility)
+Program Data = Stores application data in several sub-directories
+Users = stores user data in dedicated folders (another directory with users/user), 
+Users/Public = directory that is shared between all users
+Users/AppData = specific app data to that user
+Windows = store all the operating system files
+Windows/System = stores 16-bit DLL files
+Windows/System32 = stores 64-bit DLL files
+Windows/SysWoW32 = stores 32-bit DLL files
+Windows/WinSxS = Stores copies of system DLL files
+
+
