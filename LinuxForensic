@@ -26,4 +26,26 @@ At internet there are apps for it - example: epoch converter
 
 uptime - displays how long the system has been running since the last start 
 
+ip addr show = new ipconfig (it is out of date now) 
 
+pomiscious mode on NIC card
+ifconfig user/pcname
+ifconfig name -promisc
+
+netstat = extract network information 
+netstat -rn = displays devices routing table 
+ip r = provides data about on information about TCP/IP data packets
+
+collecting open ports
+- we use app NMAP for that, 
+nmap -sT localhost = make a full TCP connection with local host and scan for open ports 
+namp -sU localhost = make a UDP connection with local host and scan for open ports
+
+lsof = list all current open files and active processes associated with them 
+
+cat /proc/cpuinfo = views details about CPU on the machine 
+cat/self/mount = view mount points and mounted devices
+uname -r = gives information about kernel 
+cat /etc/passwd = stores local user account information 
+cat /var/log/auth.log = contains information related to the users authentication and autorization events
+grep sudo /var/log/auth.log = filters out sudo user information 
