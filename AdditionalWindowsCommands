@@ -1,1 +1,11 @@
+Net command 
 
+specific to windows administration and maintance 
+It is ued to manage network resources 
+net help = gives us help about net command 
+
+net help accounts = gives us help about net accounds 
+
+net config = following running services can be controlled (server, workstation) 
+
+net config server = information about server 
