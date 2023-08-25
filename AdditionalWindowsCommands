@@ -79,3 +79,22 @@ and initializes the system so the Windows kernel can begin execution.
 
 During the operating system initialization phase, most of the operating system work occurs. This phase involves kernel initialization, 
 Plug and Play activity, service start, login, and Explorer (desktop) initialization.
+
+notes: 
+The Windows boot process actually begins at system installation time. The Windows setup builds the structures that are necessary for the system to boot properly. 
+Therefore, these structures must be in place for any subsequent successful system initializations to take place. There are also some differences in the boot sequence that take into account the type of BIOS that is in place. 
+BIOS-based systems are essentially legacy but they are still very common. The newer type of BIOS is known as the extensible firmware interface (EFI). A more recent version of EFI, 
+known as unified extensible firmware interface (UEFI), is rapidly becoming the new standard. 
+
+When an instance of Windows is installed on a host, the setup application does some preliminary preparation of the disk that the system will boot from. 
+It will use the first sector of the disk to create an area that is known as the master boot record (MBR), which contains some executable instructions and the partition table that is used to map out the structure of the disk. 
+Once MBR is created and present on the system disk, the host can begin the boot process.
+
+When the system boots, it executes code that is stored in the flash memory of the BIOS. The code that it executes is enough to identify the boot disk it will then 
+communicate with and load the partition table information from the MBR into memory. It also transfers control to the executable code in the MBR to 
+continue the boot sequence. With the partition table loaded into memory, the system can locate the Bootmgr file. When the Bootmgr is found, the MBR 
+executable code transfers control to the Bootmgr. Bootmgr starts in “real mode,” which is the original MS-DOS memory model where programs ran in a 
+memory space of 1MB. Bootmgr’s job is to switch the system to “protected mode,” which makes the remaining memory of the system available so the boot 
+sequence can continue. If Bootmgr is not found at this point, the boot process will fail and the system will respond with the message Bootmgr not found.
+
+
