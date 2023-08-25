@@ -47,3 +47,17 @@ C:\Users\administrator.SFSNORT>net use z: \192.168.7.88\users /user:emendez
 Enter the password for 'emendez' to connect to '192.168.7.88':
 
 This command mounts a share to the remote host 192.168.7.88 and it connects to a share that is named “users.” When the share mounts, it will be mapped to the driver letter z:. So, the local users of this host will be able to use the remote share as if it were a locally connected disk drive.
+----------------------------------------------------------------------
+Controlling Startup Services
+The Msconfig.exe tool allows you to control various aspects of the system configuration. Options are grouped as tabs in the following categories:
+
+General: This group of settings allows you to control various options for starting up the system. The default is a normal startup, but you can choose a diagnostic startup or a selective startup where you can control whether to start system services, startup items or whether to use the original boot configuration.
+
+Boot: If multiple versions of Windows are installed, you can choose which one to boot on startup. You also have options for controlling the safe boot mode, which is a boot process that is used for troubleshooting system issues. Safe boot mode is normally turned off to allow the system to perform a normal boot. 
+
+Services: This section lists the services that are loaded in the system and their state: Stopped or Running. It also gives you the option to disable or enable the services, which will require a reboot to take effect.
+
+Startup: This section lists the applications and services that are configured to automatically start at boot time. It also gives you the option to disable or enable the applications and services to start at boot time, which will require a reboot to take effect. 
+
+Tools: This section lists the tools that ship with the operating system. You can launch the tools directly from this window.
+-------------------------------------------------------------------------
