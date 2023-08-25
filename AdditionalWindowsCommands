@@ -66,4 +66,16 @@ Start menu->All Programs->Accessories->System Tools->Resource Monitor
 - a detailed view of resource utilization on a system
 - CPU, memory, disk, and network resources
 When you select an item, expand each of the remaining sections to show utilization statistics for each of the resource categories
+-------------------------------------------------------------------------
+Windows BOOT process
+There are 3 main phases of windows BOOT process: BIOS initialization, OS loader, operating system initialization 
 
+During the BIOS initialization phase, the platform firmware identifies and initializes the hardware devices, and then runs a power-on self-test (POST). 
+The POST process ends when the BIOS detects a valid system disk, reads the master boot record (MBR), and starts Bootmgr.exe. 
+Bootmgr.exe finds and starts Winload.exe on the Windows boot partition, which begins the operating system Loader phase.
+
+During the operating system loader phase, the Windows loader binary (Winload.exe) loads essential system drivers that are required to read minimal data from the disk, 
+and initializes the system so the Windows kernel can begin execution.
+
+During the operating system initialization phase, most of the operating system work occurs. This phase involves kernel initialization, 
+Plug and Play activity, service start, login, and Explorer (desktop) initialization.
