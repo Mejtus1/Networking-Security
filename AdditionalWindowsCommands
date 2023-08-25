@@ -9,3 +9,27 @@ net help accounts = gives us help about net accounds
 net config = following running services can be controlled (server, workstation) 
 
 net config server = information about server 
+net command
+
+Windows operating system includes a set of commands that are specific to Windows administration and maintenance = net command
+
+NET ACCOUNTS             
+NET HELPMSG             
+NET STATISTICS
+NET COMPUTER             
+NET LOCALGROUP           
+NET STOP
+NET CONFIG               
+NET PAUSE               
+NET TIME
+NET CONTINUE             
+NET SESSION             
+NET USE
+NET FILE                 
+NET SHARE               
+NET USER
+NET GROUP               
+NET START               
+NET VIEW
+NET HELP
+---------------------------------------------------------------------
