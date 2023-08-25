@@ -33,3 +33,17 @@ NET START
 NET VIEW
 NET HELP
 ---------------------------------------------------------------------
+Mounting a remote user drive
+net use o: \\10.100.0.100\forensics 123Cisco123
+\\10.100.0.100 = IP address
+forensics = folder
+123Cisco123 = password
+
+net user = shows user accounts for our device
+net user USER1 123Cisco123 /add
+
+C:\Users\administrator.SFSNORT>net use z: \192.168.7.88\users /user:emendez
+
+Enter the password for 'emendez' to connect to '192.168.7.88':
+
+This command mounts a share to the remote host 192.168.7.88 and it connects to a share that is named “users.” When the share mounts, it will be mapped to the driver letter z:. So, the local users of this host will be able to use the remote share as if it were a locally connected disk drive.
