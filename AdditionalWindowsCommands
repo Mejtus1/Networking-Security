@@ -97,4 +97,17 @@ executable code transfers control to the Bootmgr. Bootmgr starts in “real mode
 memory space of 1MB. Bootmgr’s job is to switch the system to “protected mode,” which makes the remaining memory of the system available so the boot 
 sequence can continue. If Bootmgr is not found at this point, the boot process will fail and the system will respond with the message Bootmgr not found.
 
+Next, the Bootmgr reads the Boot Configuration Database (BCD) to read in any options that are required to start the system. The BCD also contains information 
+about whether the system was put into hibernation the last time that it was used, rather than fully shut down. If a hibernation state is detected, the BCD redirects 
+the boot process to execute Winresume.exe, which reads the hibernation file (Hiberfil.sys) to rebuild the state of the system to the state it had when it was put into hibernation.
+
+At this point, Bootmgr executes Winload.exe to continue the boot sequence. The Winload.exe program queries the system BIOS to get information about devices connected to the system. 
+The hardware information is held so the system knows what is there as the boot sequence continues and is later written to the registry so the system can have a record of the hardware 
+configuration at boot time. Next, Winload.exe begins loading the files that are needed to start initializing the kernel. It will also begin reading in the device drivers of the hardware devices connected to the host. 
+
+An important part of what Winload.exe does at this point is to enforce the Kernel Mode Code Signing (KMCS) infrastructure. The KMCS is there to ensure that all the drivers and components that Winload.exe reads in are 
+digitally signed to maintain the security of the system as it boots. 
+
+Systems that use UEFI BIOS do things a bit differently. In UEFI-based systems, the boot code is stored and executed in the UEFI firmware itself. 
+Therefore, the system never goes into the real mode memory management system. Instead, it goes directly to protected mode, which improves the host’s security at boot time. 
 
