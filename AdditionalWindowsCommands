@@ -111,3 +111,9 @@ digitally signed to maintain the security of the system as it boots.
 Systems that use UEFI BIOS do things a bit differently. In UEFI-based systems, the boot code is stored and executed in the UEFI firmware itself. 
 Therefore, the system never goes into the real mode memory management system. Instead, it goes directly to protected mode, which improves the host’s security at boot time. 
 
+Next, the Bo
+The last thing Winload.exe does is call up Ntoskrnl to initialize the Windows kernel memory and set up the Hardware Abstraction Layer (HAL) so the 
+system can communicate with the connected hardware. Once the kernel is initialized, control is handed off to the Session Manager Subsystem (SMSS), 
+which is in charge of initializing the user environment. The SMSS reads in values from the registry files to prepare the system to present the environment 
+in the state that it was last left in. The SMSS also invokes Winlogon at this point to wait for a user to log in. When a user successfully logs in, 
+Winlogon reads the registry keys for the user to prepare the user’s desktop environment. 
