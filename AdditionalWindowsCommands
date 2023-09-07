@@ -117,3 +117,27 @@ system can communicate with the connected hardware. Once the kernel is initializ
 which is in charge of initializing the user environment. The SMSS reads in values from the registry files to prepare the system to present the environment 
 in the state that it was last left in. The SMSS also invokes Winlogon at this point to wait for a user to log in. When a user successfully logs in, 
 Winlogon reads the registry keys for the user to prepare the user’s desktop environment. 
+
+-------------------------------------------------------------------------
+
+netstat command 
+- displays active TCP connections
+netstat help for additional information 
+
+netstat -r
+- displays the routing dable (and active routes)
+nestat -an 
+(a = all network connections, n = display addresses and port numbers)
+nestat -ans 
+(s for protocol statistics)
+netstat -e 
+(send and recieved statistics for etherner interface)
+netstat -nob 
+(-n filters addresses and ports in numeric format)
+(-o owner process ID that established this connection)
+(-e indicates executable that was involved in creating connection or listening port)
+
+-------------------------------------------------------------------------
+
+
+
