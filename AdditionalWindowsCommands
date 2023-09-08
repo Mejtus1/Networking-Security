@@ -139,5 +139,19 @@ netstat -nob
 
 -------------------------------------------------------------------------
 
+Accessing Network Resources
+- Microsoft pioneered the SMB protocol for sharing network resources
+- primary uses of SMB is for accessing files or file systems on remote hosts
+ \\servername\sharename\file 
 
+Share name   Resource                        Remark
+--------------------------------------------------------------
+C$           C:\                             Default share
+IPC$                                         Remote IPC
+ADMIN$       C:\Windows                      Remote Admin
+Users        C:\Users
+- the share that represents the C: drive is called C$ 
+- the ADMIN$ share points to the c:\windows directory 
+- an administrative share that is called IPC$ is used for interprocess communications.
 
+-------------------------------------------------------------------------
