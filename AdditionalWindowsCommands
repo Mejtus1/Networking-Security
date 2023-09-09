@@ -155,3 +155,16 @@ Users        C:\Users
 - an administrative share that is called IPC$ is used for interprocess communications.
 
 -------------------------------------------------------------------------
+
+Windows registry
+Windows registry is a central hierarchical database in which Microsoft Windows stores information 
+that is necessary to configure the system for one or more users, applications, and hardware devices
+- the registry is organized in a hierarchical manner 
+- the highest element of the hierarchy is known as a hive, which maps to a file in the file system that contains a binary database of registry keys and values
+HKEY_CURRENT_USER (HKCU): Stores data that is associated with the currently logged in user
+HKEY_USERS (HKU): Stores information about all the user accounts on the host
+HKEY_CLASSES_ROOT (HKCR): Stores information about file associations and Object Linking and Embedding (OLE) registrations
+HKEY_LOCAL_MACHINE (HKLM): Stores system-related information
+HKEY_CURRENT_CONFIG (HKCC): Stores information about the current hardware profile
+
+-------------------------------------------------------------------------
