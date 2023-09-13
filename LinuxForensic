@@ -84,4 +84,22 @@ These directory locations are used to store specific types of data as follows:
 
 /lib: Stores library files that must be available to executable files at run time.
 
+---------------------------------------------------------------------------------------------------------------
+File System Types
+
+File systems themselves come in several varieties. The native Linux file system is known as extended file system or ext. This file system type has been updated over the years; the most current version is ext4. Linux continues to support the two previous versions: ext2 and ext3. There are several file system types that you are likely to encounter in Linux environments:
+
+ext2, ext3 and ext4: Considered native Linux file systems, ext4 is the most current. Linux maintains backward compatibility with the previous versions as well.
+
+NTFS: Used by modern Microsoft Windows environments, this complex file system supports versatile permissions, large disks, and other advanced features.
+
+FAT16, FAT32, exFAT: FAT was the native file system in older Microsoft environments. It has mostly been replaced by NTFS but remains as a fairly common file system type since many USB storage devices come formatted with the FAT file system. FAT file systems are Linux compatible, but lack features such as permissions and support for large disks.
+
+ISO 9660 and JOLIET: File system standards that are used on optical media, like DVDs and CDs.
+
+HFS+: The file system that is used by Apple systems running operating system X. Linux ships with drivers that can read and write to this file system, so there is compatibility between Linux and HFS+.
+
+Swap: A special type of file system that is used in Linux swap partitions. The swap partition is disk space that is reserved for the system to use when it needs to free memory resources. The system’s main memory (RAM) is very fast compared to disk drives, so, ideally, you will want to run everything in main memory. 
+However, if the system starts to run low on main memory, it can free up memory resources by moving data in memory to the swap partition. So, the swap space is not really a file system at all. It is directly addressable space on a disk drive to temporarily dump content from main memory. When a system’s main memory resources are oversubscribed, 
+you will find that the system’s performance will degrade substantially because it is moving data much more frequently between main memory and the swap disk.
 
