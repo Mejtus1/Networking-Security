@@ -103,3 +103,34 @@ Swap: A special type of file system that is used in Linux swap partitions. The s
 However, if the system starts to run low on main memory, it can free up memory resources by moving data in memory to the swap partition. So, the swap space is not really a file system at all. It is directly addressable space on a disk drive to temporarily dump content from main memory. When a system’s main memory resources are oversubscribed, 
 you will find that the system’s performance will degrade substantially because it is moving data much more frequently between main memory and the swap disk.
 
+---------------------------------------------------------------------------------------------------------------
+System Initialization
+The general sequence of events in the Linux boot process is as follows:
+
+Hardware checks
+
+Device bus discovery
+
+Device discovery
+
+Kernel subsystem initializes
+
+Root file system mounts
+
+Start user processes
+
+The key component that starts the boot process is the bootloader. 
+There are many boot loaders available to choose from, but the two most common are GRUB and LILO. 
+Because no drivers to access disk drives are available at start time, the bootloader must interact with the system’s BIOS, 
+or its more modern counterpart UEFI, to access the disk hardware. The BIOS/UEFI resides in the system’s firmware. 
+It contains enough code to perform some basic system checks and initialization of system peripherals at boot time. 
+One of the checks that it performs is to find the system start disk and read its partition table, which contains a small bootstrap program. 
+The bootloader’s primary job is to find the kernel on the startup disk and load the kernel into memory so that it can begin booting the system.
+
+Boot parameters that are processed by the bootloader are called /proc/cmdline. An example of its contents follows:
+
+ BOOT_IMAGE=/boot/vmlinuz-4.4.0-22-generic root=UUID=339228c9-cbc3-4503-950f-40415e03779f ro quiet splash 
+
+The BOOT_IMAGE parameter contains a reference to the Linux kernel and the root parameter that follows it identifies the disk drive where the boot image can be found. 
+Note that the disk is referenced with its UUID. It can also be referenced using its device name, /dev/sda1, for example, but most modern Linux implementations will use the UUID.
+---------------------------------------------------------------------------------------------------------------
