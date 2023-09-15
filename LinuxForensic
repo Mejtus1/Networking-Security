@@ -134,3 +134,7 @@ Boot parameters that are processed by the bootloader are called /proc/cmdline. A
 The BOOT_IMAGE parameter contains a reference to the Linux kernel and the root parameter that follows it identifies the disk drive where the boot image can be found. 
 Note that the disk is referenced with its UUID. It can also be referenced using its device name, /dev/sda1, for example, but most modern Linux implementations will use the UUID.
 ---------------------------------------------------------------------------------------------------------------
+Disk Partitions
+- partitions are areas of the physical disk that are reserved for storing data
+- /dev directory lists the structure of disk devices
+- physical disks have 3 letter code assigned to them - sda, sdb 
