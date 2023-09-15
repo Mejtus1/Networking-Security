@@ -142,3 +142,11 @@ Disk Partitions
 /dev/sda: The first physical disk
 /dev/sda1: The first partition of the first physical disk
 /dev/sda2: The second partition of the first physical disk
+
+MBR
+Master Boot record- older partition table, limited partitions on the disk (4)
+- disk may have only one MBR 
+GPT
+- newer type of partition table 
+- removes restrictions on disks 
+
