@@ -150,3 +150,10 @@ GPT
 - newer type of partition table 
 - removes restrictions on disks 
 
+parted command 
+ed@labhost:~$ sudo parted -l
+Model: VMware Virtual disk (scsi)
+Disk /dev/sda: 322GB
+Sector size (logical/physical): 512B/512B
+Partition Table: msdos
+
