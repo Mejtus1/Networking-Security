@@ -133,6 +133,7 @@ Boot parameters that are processed by the bootloader are called /proc/cmdline. A
 
 The BOOT_IMAGE parameter contains a reference to the Linux kernel and the root parameter that follows it identifies the disk drive where the boot image can be found. 
 Note that the disk is referenced with its UUID. It can also be referenced using its device name, /dev/sda1, for example, but most modern Linux implementations will use the UUID.
+
 ---------------------------------------------------------------------------------------------------------------
 Disk Partitions
 - partitions are areas of the physical disk that are reserved for storing data
@@ -156,4 +157,17 @@ Model: VMware Virtual disk (scsi)
 Disk /dev/sda: 322GB
 Sector size (logical/physical): 512B/512B
 Partition Table: msdos
+
+---------------------------------------------------------------------------------------------------------------
+Mounting Devices
+
+UUID=339228c9-cbc3-4503-950f-40415e03779f / ext4 errors=remount-ro 0 1 
+UUID of the device: device is /dev/sda1. When filesystem is created, UUID is generated  
+Mount point: mount point is root (/), which indicates where the root of the file system is located
+File system type: ext4 file system type
+Dump frequency: The second-to-last column (0)no longer has relevance in modern Linux environments
+Pass number: The final column (shown as a one) configures the order that devices should be mounted
+
+---------------------------------------------------------------------------------------------------------------
+
 
