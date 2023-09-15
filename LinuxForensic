@@ -138,3 +138,7 @@ Disk Partitions
 - partitions are areas of the physical disk that are reserved for storing data
 - /dev directory lists the structure of disk devices
 - physical disks have 3 letter code assigned to them - sda, sdb 
+
+/dev/sda: The first physical disk
+/dev/sda1: The first partition of the first physical disk
+/dev/sda2: The second partition of the first physical disk
