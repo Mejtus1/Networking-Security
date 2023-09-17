@@ -168,3 +168,4 @@ HKEY_LOCAL_MACHINE (HKLM): Stores system-related information
 HKEY_CURRENT_CONFIG (HKCC): Stores information about the current hardware profile
 
 -------------------------------------------------------------------------
+
