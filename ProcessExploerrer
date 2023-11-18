@@ -1,0 +1,91 @@
+Windows 64x-bit process explorer 
+
+Conhost.exe 
+- (Console Windows Host) file is provided by Microsoft and is usually legitimate and completely safe
+- conhost.exe needs to run for Command Prompt to interface with File Explorer
+- one of its duties is to provide ability to drag and drop files/folders directly into Command Prompt
+- even third-party programs can use conhost.exe
+
+LSALSO.exe 
+- (LSA Isolated) is legitimate Windows executable file that's associated with Microsoft's Credential Guard & KeyGuard process
+
+WUDFhost.exe 
+- driver host process (Wudfhost.exe) is a child process of the driver manager service
+- Windows Driver Foundation process, represented by “Wdf.exe” file, is responsible for managing and executing these device drivers
+- Wudfhost.exe usually runs in LocalService account, which has minimum privileges on local computer
+- instance of Wudfhost.exe loads one or more UMDF driver DLLs, in addition to framework DLLs
+
+Unsecapp.exe 
+- is one of several Windows system processes that run in background  
+- genuine system component
+- stands for Universal Sink to Receive Callbacks from Applications, and relates to process that’s listed in Windows as Sink to receive asynchronous callbacks for WMI client application
+
+dashost.exe 
+- used by the Windows OS to pair hardware devices with your PC
+
+wlanext.exe
+- genuine wlanext.exe file is software component of Microsoft Windows Operating System by Microsoft Corporation
+- genuine "Wlanext.exe" file, found in "C:\Windows\System32," is Microsoft Windows service that has no visible window, called "Windows Wireless LAN 802.11 Extensibility Framework." 
+- it is started by "svchost.exe" as child process 
+
+AggregatorHost.exe 
+- executable file that is part of Microsoft Aggregator Host software
+- this software is developed and maintained by Microsoft Corporation and is typically associated with Windows operating system
+- system process that is responsible for collecting and aggregating data from various sources
+- this data is then used by other applications or services within Windows operating system 
+- it plays crucial role in ensuring that system and its applications function correctly by providing them with necessary data
+
+dwm.exe
+Desktop Window Manager 
+- (dwm.exe) is compositing window manager that renders all those pretty effects in Windows: transparent windows, live taskbar thumbnails, Flip3D, and even high resolution monitor support
+- instead of applications drawing their displays directly to your screen, applications write picture of their window to specific place in memory, windows then creates one "composite" view of all windows on screen before sending it to your monitor
+- because Windows is compositing and displaying contents of each window, it can add effects like transparency and window animations when layering windows for display
+
+msmpeng.exe
+- stands for Microsoft Malware Protection Engine
+- important part of Windows Security, formerly known as Windows Defender 
+- it scans your computer for various threats ranging from malware to spyware
+- also known as Antimalware service executable, it is built-in antivirus program for windows 10 >> 
+- msmpeng.exe eats up too much CPU disk space because it actively runs in background and scans every program 
+
+System 
+- PID is assigned 4 
+- is home for special kind of thread that runs only in kernel mode a kernel-mode system thread
+
+svchost.exe 
+- responsible for hosting and managing Windows services 
+- services running in this process are implemented as DLLs
+- since svchost.exe will always have multiple running processes on any Windows system, this process has been a target for malicious use
+- look out for scvost.exe or other impersonations 
+
+csrss.exe 
+- shows up in Task Manager as Client Server Runtime Process, essential part of Windows
+- you never interact with it directly as user 
+- performs essential functions in background
+
+wininit.exe
+- made by Microsoft and is core system process
+- allow uninstallers to run and process commands stored in file WinInit
+
+msedgewebview2.exe  
+- is way for app developers to embed web content (such as HTML, JavaScript, and CSS) in Windows applications
+- part of microsoft edge browser 
+- needed for applications that require embedding of web content or use of web technologies
+
+gameinputsvc.exe
+- part of Microsoft GameInput software
+- primarily used for managing and improving the input handling for games on Windows
+- provides unified way for games to handle input from different types of controllers
+
+fontdrvhost.exe
+- genuine fontdrvhost.exe file is software component of Windows font driver management by Microsoft
+- part of Windows operating system, 
+- manages font drivers in current user account
+
+ctfmon.exe
+- Collaborative Translation Framework (CTF) Monitoring service, also called CTF Loader
+- software component of Microsoft Windows Operating System
+
+
+
+
